@@ -4,14 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/16f157b3ae.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato" rel="stylesheet">
     <link rel="stylesheet" style="text/css" href="./styles/reset.css"/>
-    <link rel="stylesheet" style="text/css" href="./styles/styles.css"/>
     <link rel="stylesheet" style="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css"/>
+    <link rel="stylesheet" style="text/css" href="./styles/styles.css"/>
     <title>Fired Up</title>
   </head>
+
   <body>
-    <h1 id="title">FIRED UP</h1>
+    <h1 id='title'>
+      FIRED UP
+    </h1>
     <div id="button-wrap">
       <button id="play-button">
         <i class="fa fa-play"></i>
@@ -19,29 +23,48 @@
       </button>
       <button id="pause-button">
         <i class="fa fa-pause"></i>
-        Pause Session
+        Pause / Resume
       </button>
       <button id="stop-button">
         <i class="fa fa-stop"></i>
         Stop Session
       </button>
-      <button id="storage-button">
-        Storage
+    </div>
+
+    <section id="productivity-chart">
+      <div id='instructions'>
+        Enter your session name below <br>
+        Press 'Start Session' to begin <br>
+        Your Active Window will be recorded <br>
+        Pressing 'Stop Session' will save your session <br>
+        Witness how productive you are and get Fired Up!
+      </div>
+    </section>
+
+    <div id='button-container'>
+      <input
+        id="session-name-input"
+        placeholder="Add Session Name"
+        hidden="false"
+      />
+      <button id="graph-button">
+        Display Graph
+      </button>
+      <button id="table-button">
+        Display Table
       </button>
     </div>
-    <section id="productivity-chart">
-    </section>
 
     <section id="session-list">
       <h2>Sessions</h2>
-    </section>
+      <section id="session-list-display">
 
-    <button id="graph-button">
-      Display Graph
-    </button>
-    <button id="table-button">
-      Display Table
-    </button>
+      </section>
+      <button id="clear-storage-button">
+        <i class="fa fa-trash"></i>
+        CLEAR
+      </button>
+    </section>
 
     <script src="./render.js"></script>
   </body>
